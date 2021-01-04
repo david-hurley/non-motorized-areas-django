@@ -1,8 +1,9 @@
 {% extends "maps/base.html" %}
 {% load static %}
 {% block content %}
+<div id="text">
   <h4>Description of Areas</h4>
-  <p>The below table is taken from the Sea-to-Sky LRMP document dated April 2008.</p>
+  <p>The below table is taken from the Sea-to-Sky LRMP document dated April 2008 (see link below).</p>
   <img src="{% static 'images/zone-description.png'%}" alt="">
   <h4>Helpful Links</h4>
   <ul>
@@ -16,11 +17,11 @@
       Non-Motorized Zones - BC Mountaineering Club (BCMC) Homepage
     </a></li>
     <li><a href="https://maps.gov.bc.ca/ess/hm/imap4m/">
-      iMapBC - source for map data layers, search for the layer named 'Winter Recreation Zoning - Non-Commercial - Sea to Sky LRMP - Non Legal'
-    </a></li>
+      iMapBC - source for map data layers</a> (from iMapBC search for the layer named 'Winter Recreation Zoning - Non-Commercial - Sea to Sky LRMP - Non Legal')
+    </li>
   </ul>
-  <hr>
   <p>
     Note, this is not an exhaustive list of resources. If you know of more please contact me and I will add them.
   </p>
+</div>
 {% endblock content %}
