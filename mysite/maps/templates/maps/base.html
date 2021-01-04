@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Non-Commercial Winter Recreation Zoning</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Mapbox Core-->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/maps.css' %}">>
+
+</head>
+<body>
+
+  <!-- BootStrap NavBar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <span class="navbar-brand">Non-Commercial Winter Recreation Zoning (December 1 to May 31)</span>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="{% url 'map-home' %}">Map</a></li>
+        <li class="active"><a href="{% url 'map-about' %}">About</a></li>
+        <li class="active"><a href="{% url 'map-resources' %}">Resources</a></li>
+        <li class="active"><a href="{% url 'map-download' %}">Download for Gaia</a></li>
+        <li class="active"><a href="{% url 'map-contact' %}">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<!-- Container to inherit pages -->
+<div class="container-fluid">
+  <div class="row">
+      {% block content %}{% endblock %}
+  </div>
+</div>
+
+</body>
+</html>

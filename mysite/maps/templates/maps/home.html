@@ -1,0 +1,11 @@
+{% extends "maps/base.html" %}
+{% block content %}
+  <div id="map"></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGxodXJsZXkiLCJhIjoiY2sya2xrMTJqMWFjMzNucXB3bnp1MXd0ZyJ9.UBKniAsr5Li1Yv5dJOP5yQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/dlhurley/ckjah9xzk52hn19rnp7g4sf9m'
+    });
+  </script>
+{% endblock content %}
