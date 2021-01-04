@@ -7,5 +7,10 @@
       container: 'map',
       style: 'mapbox://styles/dlhurley/ckjah9xzk52hn19rnp7g4sf9m'
     });
+
+    var popup = new mapboxgl.Popup({ closeOnClick: false })
+		.setLngLat([-123.011, 49.930])
+		.setHTML('<h5>Winter Recreation Zones are in effect for non-commercial recreation between December 1 and May 31 annualy.</h5><h3><strong>WARNING: </strong></h3><p>This site does not warrant the quality, accuracy, or completeness of any information, data or product from these web pages. It is provided "AS IS" without warranty or condition of any nature.</p>')
+		.addTo(map);
   </script>
 {% endblock content %}
